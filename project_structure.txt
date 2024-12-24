@@ -1,0 +1,185 @@
+.
+├── _commands
+│   ├── di_by_dep_gen.sh
+│   ├── json_build.sh
+│   ├── launcher_icons.sh
+│   └── splash.sh
+├── android
+│   ├── app
+│   │   ├── src
+│   │   │   ├── debug
+│   │   │   ├── main
+│   │   │   └── profile
+│   │   └── build.gradle
+│   ├── gradle
+│   │   └── wrapper
+│   │       └── gradle-wrapper.properties
+│   ├── build.gradle
+│   ├── gradle.properties
+│   ├── local.properties
+│   └── settings.gradle
+├── assets
+│   └── fonts
+│       ├── inter_black.ttf
+│       ├── inter_bold.ttf
+│       ├── inter_extra_bold.ttf
+│       ├── inter_extra_light.ttf
+│       ├── inter_light.ttf
+│       ├── inter_medium.ttf
+│       ├── inter_regular.ttf
+│       ├── inter_semi_bold.ttf
+│       └── inter_thin.ttf
+├── coverage
+│   └── lcov.info
+├── ios
+│   ├── Flutter
+│   │   ├── AppFrameworkInfo.plist
+│   │   ├── Debug.xcconfig
+│   │   ├── Generated.xcconfig
+│   │   ├── Release.xcconfig
+│   │   └── flutter_export_environment.sh
+│   ├── Runner
+│   │   ├── Assets.xcassets
+│   │   │   ├── AppIcon.appiconset
+│   │   │   └── LaunchImage.imageset
+│   │   ├── Base.lproj
+│   │   │   ├── LaunchScreen.storyboard
+│   │   │   └── Main.storyboard
+│   │   ├── AppDelegate.swift
+│   │   ├── GeneratedPluginRegistrant.h
+│   │   ├── GeneratedPluginRegistrant.m
+│   │   ├── Info.plist
+│   │   └── Runner-Bridging-Header.h
+│   ├── Runner.xcodeproj
+│   │   ├── project.xcworkspace
+│   │   │   ├── xcshareddata
+│   │   │   └── contents.xcworkspacedata
+│   │   ├── xcshareddata
+│   │   │   └── xcschemes
+│   │   └── project.pbxproj
+│   ├── Runner.xcworkspace
+│   │   ├── xcshareddata
+│   │   │   ├── IDEWorkspaceChecks.plist
+│   │   │   └── WorkspaceSettings.xcsettings
+│   │   └── contents.xcworkspacedata
+│   ├── RunnerTests
+│   │   └── RunnerTests.swift
+│   └── Podfile
+├── lib
+│   ├── core
+│   │   ├── constants
+│   │   │   ├── strings.dart
+│   │   │   └── values.dart
+│   │   ├── environment
+│   │   │   ├── builders.dep_gen.dart
+│   │   │   └── environment.dart
+│   │   ├── errors
+│   │   │   └── i_error_logger.dart
+│   │   ├── extensions
+│   │   │   ├── context_extensions.dart
+│   │   │   └── iterable_extensions.dart
+│   │   ├── navigation
+│   │   │   └── top_route.dart
+│   │   ├── routing
+│   │   │   ├── app_router.dart
+│   │   │   └── app_router.gr.dart
+│   │   ├── use_case
+│   │   │   └── use_case.dart
+│   │   ├── utils
+│   │   │   ├── colored_log.dart
+│   │   │   ├── debouncer.dart
+│   │   │   └── form_fields.dart
+│   │   └── application.dart
+│   ├── data
+│   │   ├── api
+│   │   │   ├── http_client
+│   │   │   ├── mapper
+│   │   │   ├── model
+│   │   │   └── api_facade.dart
+│   │   ├── error_logger
+│   │   │   └── error_logger.dart
+│   │   ├── interfaces
+│   │   │   ├── i_api_facade.dart
+│   │   │   └── i_local_cache.dart
+│   │   ├── local_cache
+│   │   │   └── local_cache.dart
+│   │   └── repositories
+│   │       ├── authenticate_repository.dart
+│   │       ├── template_repository.dart
+│   │       └── timers_repository.dart
+│   ├── domain
+│   │   ├── entities
+│   │   │   ├── in_app_timer.dart
+│   │   │   ├── jwt_tokens.dart
+│   │   │   └── theme_type.dart
+│   │   ├── repositories
+│   │   │   ├── i_authenticate_repository.dart
+│   │   │   ├── i_template_repository.dart
+│   │   │   └── i_timers_repository.dart
+│   │   └── use_cases
+│   │       ├── authenticate
+│   │       └── local_cache
+│   ├── l10n
+│   │   ├── app_en.arb
+│   │   ├── app_ru.arb
+│   │   └── locale_provider.dart
+│   ├── presentation
+│   │   ├── auth_controller
+│   │   │   ├── bloc
+│   │   │   └── auth_controller_screen.dart
+│   │   ├── common
+│   │   │   ├── common_pagination_listener.dart
+│   │   │   ├── common_scale_limit.dart
+│   │   │   └── common_unfocus_by_gesture.dart
+│   │   ├── screens
+│   │   │   ├── auth
+│   │   │   ├── categories
+│   │   │   ├── category_detail
+│   │   │   ├── developer_widgets
+│   │   │   ├── error
+│   │   │   ├── main
+│   │   │   ├── notification_detail
+│   │   │   ├── notification_settings
+│   │   │   ├── notifications
+│   │   │   ├── on_boaring
+│   │   │   ├── profile
+│   │   │   ├── root
+│   │   │   ├── settings
+│   │   │   ├── splash
+│   │   │   ├── stats
+│   │   │   └── workspace
+│   │   └── theme
+│   │       ├── dynamic_theme.dart
+│   │       ├── palette.dart
+│   │       └── themes.dart
+│   └── main.dart
+├── test
+│   ├── domain
+│   │   ├── extensions
+│   │   │   └── iterable_extensions_unit_test.dart
+│   │   ├── repositories
+│   │   │   ├── authenticate_repository_test.dart
+│   │   │   ├── authenticate_repository_test.mocks.dart
+│   │   │   ├── timers_repository_test.dart
+│   │   │   └── timers_repository_test.mocks.dart
+│   │   └── utils
+│   │       ├── colored_log_unit_test.dart
+│   │       ├── debouncer_unit_test.dart
+│   │       └── form_fields_unit_test.dart
+│   ├── presentation
+│   │   └── integration
+│   │       ├── auth_controller_integration_test.dart
+│   │       └── auth_controller_integration_test.mocks.dart
+│   └── widget_test.dart
+├── LICENSE
+├── README.md
+├── analysis_options.yaml
+├── build.yaml
+├── devtools_options.yaml
+├── flutter_native_splash.yaml
+├── l10n.yaml
+├── project_structure.txt
+├── pubspec.lock
+└── pubspec.yaml
+
+83 directories, 100 files
